@@ -56,6 +56,7 @@ This yields 48 participants × 8 trials = 384 rows.
 | `strat_err` | numeric (0/1) | Complement of `strat_corr` (1 = strategy was inherently flawed for this problem). |
 | `strat_overgen` | numeric (0/1) | 1 if the strategy reflects overgeneralizing a procedure from a different arithmetic operation (e.g., applying the addition procedure to a multiplication problem). |
 | `OpNumKeepDen`, `IndepComp`, `InvertOper` | numeric (0/1) | Dummy-coded indicators for 3 of the 4 `strat` categories, used directly as predictors in the regression models reported in Braithwaite et al. (2017). `Other/None` is the omitted reference category. |
+| `strat_text` | character | The child's verbatim think-aloud description of their strategy, transcribed from audio recordings (e.g., "I took 3 plus 2 and got 5, and 5 plus 5 and got 10, which is 5/10"). This is the raw text that `strat` and `strat_orig` were coded from. |
 
 ### Strategy codes (`strat` / `strat_orig`)
 
@@ -74,9 +75,10 @@ This yields 48 participants × 8 trials = 384 rows.
 
 No missing values. Every participant contributed exactly 8 trials
 (48 × 8 = 384 rows). No personally identifying information is included:
-`subjid` values are arbitrary codes assigned during data collection, and no
-names, dates, school identifiers, or free-text responses are present in
-this file.
+`subjid` values are arbitrary codes assigned during data collection, and the
+verbatim strategy transcripts (`strat_text`) were reviewed in full and
+contain no names, dates, school identifiers, or other identifying
+information — only descriptions of arithmetic strategies.
 
 ## License
 
